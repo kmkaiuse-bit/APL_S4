@@ -1,0 +1,7 @@
+.input-hint{margin:-6px 0 16px;max-width:100%;color:var(--blue);font-size:14px}
+.input-hint>summary{width:fit-content;min-height:36px;padding:5px 2px;font-weight:700}
+.input-hint>summary:focus-visible{outline:3px solid #228cae;outline-offset:3px}
+.input-hint>p{margin:4px 0 0;padding:10px 12px;border-left:2px solid var(--blue);background:#eef6f8;color:var(--ink);overflow-wrap:anywhere}
+.input-hint>p.hint-example{margin-top:0;padding-top:0;font-weight:700}
+fieldset .input-hint{margin:0 0 8px}
+@media print{.input-hint{display:none!important}}
