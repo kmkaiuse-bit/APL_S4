@@ -12,3 +12,8 @@
 .p3-script{border-left:3px solid var(--blue);padding-left:18px;margin:22px 0}.p3-script h4{font-size:18px;margin-top:26px}.p3-script textarea{min-height:68px}.p3-script .field{margin:12px 0}.p3-script select{font-size:16px}#p3-demo-content p{margin:10px 0 0}#p3-archive-text{max-height:400px;overflow:auto}
 
 .activity-step>summary{cursor:pointer;list-style-position:outside;font-size:21px;line-height:1.45;padding:0 8px 0 0}.activity-step>summary .exercise-meta{display:block;font-size:12px;margin-bottom:6px}.activity-step>summary strong{font-size:21px}.activity-body{padding-top:16px}.activity-step:not([open]){padding-bottom:20px}.activity-guide{font-size:14px;color:var(--blue)}
+
+/* Teacher demonstration prompts stay visible within the selected activity. */
+.teacher-prompt-block{margin:1.25rem 0;padding:1rem;border:1px solid #b9cbd3;background:#f5f9fb;border-radius:8px}.teacher-prompt-block label{display:block;margin-top:.8rem;font-weight:600}.teacher-prompt-block textarea.teacher-full-prompt{box-sizing:border-box;max-width:100%;width:100%;height:auto;min-height:0;resize:vertical;white-space:pre-wrap;line-height:1.55}.teacher-prompt-block h4{margin-top:1rem}
+
+.social-example{margin:1rem 0;padding:1.2rem;border-left:4px solid var(--blue);background:#f3f7f8}.social-example h4{font-size:1.15rem;margin:.2rem 0 .8rem}.social-example p:last-child{margin-bottom:0}

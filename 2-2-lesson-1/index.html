@@ -3,21 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="lesson-revision" content="20261021-publish13">
   <title>2.2 第1堂｜演算法點選中你？</title>
-  <link rel="stylesheet" href="workshop.css">
-  <script defer src="icons.js"></script>
-  <script defer src="pdf-lib.min.js"></script>
-  <script defer src="first-part.js"></script>
-  <script defer src="second-part.js"></script>
-  <script defer src="third-part.js"></script>
-  <script defer src="fourth-part.js"></script>
-  <script defer src="fifth-part.js"></script>
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="workshop.css?v=20261021-publish13">
+  <script defer src="icons.js?v=20261021-publish13"></script>
+  <script defer src="pdf-lib.min.js?v=20261021-publish13"></script>
+  <script defer src="first-part.js?v=20261021-publish13"></script>
+  <script defer src="second-part.js?v=20261021-publish13"></script>
+  <script defer src="third-part.js?v=20261021-publish13"></script>
+  <script defer src="fourth-part.js?v=20261021-publish13"></script>
+  <script defer src="fifth-part.js?v=20261021-publish13"></script>
+  <script defer src="app.js?v=20261021-publish13"></script>
 </head>
 <body>
   <header class="masthead"><div class="mast-inner"><div><p class="eyebrow">2.2 AI與社交媒體 · 第1堂</p><h1>演算法點選中你？</h1></div><span id="save-state" role="status">尚未填答</span></div></header>
   <nav class="parts" aria-label="課堂部分"><div id="part-nav"></div></nav>
-  <main id="main" tabindex="-1"><noscript>請啟用JavaScript以填答及保存紀錄；也可按PPT題目在紙上作答。</noscript></main>
+  <main id="main" tabindex="-1"><noscript><p>互動作答及保存需要JavaScript；教師仍可直接複製以下完整指令。</p><h3>第1輪：開新對話</h3><pre>幫我寫一段運動鞋宣傳。</pre><h3>第2輪：另開新對話</h3><pre>你是社交媒體文字助手。
+
+產品卡：
+虛構山角校園用品店，低筒學生運動鞋，黑／白兩色，每對HK$399。
+
+讀者：香港中學生。
+用途：短片畫面上的三句字幕。
+溝通目的：讓讀者知道鞋款與售價。
+
+請只寫一版，共三句，分別為開場、商品介紹、結尾。
+總共不超過60個中文字，使用直接易懂的繁體中文。
+
+只輸出文字，不生成圖片、聲音或影片。
+不新增尺碼、庫存、優惠、送貨、退換或功效。
+資料不足就說未提供。
+不保證流量、推薦或讀完秒數。</pre><h3>第3輪A：留在第2輪同一對話，選顏色</h3><pre>沿用剛才的產品卡與三句字幕。
+
+只將溝通目的由「讓讀者知道鞋款與售價」，改成「邀請讀者選黑色或白色」。
+
+只調整結尾一句，讓它符合新目的。
+開場、商品介紹、語氣、三句格式及60中文字上限維持。
+
+產品事實及售價不能改，不新增任何未提供的承諾。
+
+只輸出修改後三句字幕，不解釋、不保證流量或秒數。</pre><h3>第3輪B：留在第2輪同一對話，問買前資料</h3><pre>沿用剛才的產品卡與三句字幕。
+
+只將溝通目的由「讓讀者知道鞋款與售價」，改成「邀請讀者提出買前需要確認的問題」。
+
+只調整結尾一句，讓它符合新目的。
+開場、商品介紹、語氣、三句格式及60中文字上限維持。
+
+產品事實及售價不能改，不新增任何未提供的承諾。
+
+只輸出修改後三句字幕，不解釋、不保證流量或秒數。</pre><h3>第50–51頁：Gemini資料核對完整指令</h3><pre>你是課堂資料核對助手。只按以下提供的資料比較說法，不自行上網，也不聲稱已讀原網站。
+待核對說法：每條影片固定先推200人，再推1000人。
+來源：TikTok公開說明，2020年6月18日。
+教師中文摘要（不是逐字引文）：TikTok於2020年6月18日的公開說明描述觀看、互動、影片資訊等多種推薦訊號。這份文章沒有證實每條影片固定先推200人，再推1000人的階梯；也不能由本文推論所有平台從未做過類似測試。
+請只答兩點，每點最多一句，合共不超過100個中文字：
+1. 這個說法中哪個詞或數字缺乏這份資料支持？
+2. 怎樣改成一句沒有講得太盡的說法？
+不把「本文未證實」改成「所有平台從未做過」，不新增平台內部資料。</pre></noscript></main>
   <footer class="actions"><div class="action-inner"><div class="page-buttons"><button type="button" id="previous"><i data-lucide="arrow-left"></i><span>上一部分</span></button><button type="button" id="next"><span>下一部分</span><i data-lucide="arrow-right"></i></button></div><div class="exports"><button type="button" id="download-all" class="primary" hidden><i data-lucide="download"></i>下載全堂 PDF</button><button type="button" id="clear" class="icon-button" title="清除本機本堂紀錄" aria-label="清除本機本堂紀錄"><i data-lucide="trash-2"></i></button></div></div><p id="export-status" role="status" aria-live="polite"></p></footer>
   <div id="toast" role="status" aria-live="polite"></div>
   <dialog id="clear-dialog"><h2>清除本機本堂紀錄？</h2><p>只清除這個瀏覽器的2.2第1堂答案，不影響上一堂。先下載需要保留的紀錄。</p><div class="dialog-actions"><button type="button" id="cancel-clear">取消</button><button type="button" id="confirm-clear" class="danger">確認清除</button></div></dialog>
