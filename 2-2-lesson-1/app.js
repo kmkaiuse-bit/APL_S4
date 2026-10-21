@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 const KEY='apl-22-lesson1-v1';
-const parts=[['01','相似推薦與排序'],['02','數據、AI與資訊缺口'],['03','老師示範AI腳本'],['04','審稿與發布判斷'],['05','資料核對與留言回覆']];
+const parts=[['01','相似推薦與排序'],['02','數據、AI與資訊缺口'],['03','老師示範AI腳本'],['04','審稿與發布判斷'],['05','資料核對與視覺示範']];
 const fields=new Map();
 let values={},active=0,storageOK=true,timerStart=0,timerElapsed=0,timerInterval=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -41,7 +41,7 @@ function followup(){return '只調整說法，不新增產品卡資料；最多�
 
 function syncDerived(){const p=document.getElementById('prompt-output');if(p)p.value=buildPrompt();const f=document.getElementById('followup-output');if(f)f.value=followup();const d=document.getElementById('draft-preview');if(d)d.value=draft();}
 function syncDownloadVisibility(){const last=active===parts.length-1;document.getElementById('download-all').hidden=!last;document.getElementById('export-status').hidden=!last;}
-function render(){stopTimer();const index=parts.findIndex(p=>p[0]===location.hash.replace('#',''));active=index<0?0:index;document.getElementById('part-nav').innerHTML=parts.map(([n,t],i)=>`<a class="part-link" href="#${n}" ${active===i?'aria-current="page"':''}><span>${n}</span>${t}</a>`).join('');document.getElementById('main').innerHTML=`<span class="section-number">PART ${parts[active][0]}</span><h2>${parts[active][1]}</h2><p class="part-description">${['不同人為何看到相似內容？先猜、問AI，再算一張及親手排序。','先看數據、親自問AI，再改一個數字追問；休息後找出買前缺少的資料。','分清生成與推薦；看老師由簡單指令補上要求，再由你選改一個目的，觀察AI輸出。','你是帳戶編輯：審核貼文、按店舖新資料修正發布判斷，再選合適的成效紀錄。','先判斷推薦說法有沒有資料支持，再用一次Gemini協助核對；選顧客留言回覆，組成發布決定卡。'][active]}</p><p class="activity-guide">一次做一個小活動；按活動標題開啟下一項。展開不代表已完成。</p><p class="privacy-note">按自己的判斷作答；使用虛構例子，不填姓名、帳號或私人對話。作答後再核對。</p>${templates[active]()}<details class="record-fallback"><summary>查看／複製全堂文字紀錄</summary><label for="record-text" class="small">下載未成功時可保留以下文字（唯讀）</label><textarea id="record-text" readonly class="long"></textarea><button type="button" id="copy-record"><i data-lucide="copy"></i>複製文字紀錄</button></details>`;document.querySelectorAll('[data-field]').forEach(el=>el.value=typeof values[el.dataset.field]==='string'?values[el.dataset.field]:'');document.getElementById('previous').disabled=active===0;document.getElementById('next').disabled=active===4;syncDownloadVisibility();updateSave();syncDerived();updateTimerDisplay();refreshRecord();if(window.lucide)lucide.createIcons();}
+function render(){stopTimer();const index=parts.findIndex(p=>p[0]===location.hash.replace('#',''));active=index<0?0:index;document.getElementById('part-nav').innerHTML=parts.map(([n,t],i)=>`<a class="part-link" href="#${n}" ${active===i?'aria-current="page"':''}><span>${n}</span>${t}</a>`).join('');document.getElementById('main').innerHTML=`<span class="section-number">PART ${parts[active][0]}</span><h2>${parts[active][1]}</h2><p class="part-description">${['不同人為何看到相似內容？先猜、問AI，再算一張及親手排序。','先看數據、親自問AI，再改一個數字追問；休息後找出買前缺少的資料。','分清生成與推薦；看老師由簡單指令補上要求，再由你選改一個目的，觀察AI輸出。','你是帳戶編輯：審核貼文、按店舖新資料修正發布判斷，再選合適的成效紀錄。','先按資料核對推薦說法，再看老師生成圖片、修改背景及展示動態結果；學生只看投影、預測和比較。'][active]}</p><p class="activity-guide">一次做一個小活動；按活動標題開啟下一項。展開不代表已完成。</p><p class="privacy-note">按自己的判斷作答；使用虛構例子，不填姓名、帳號或私人對話。作答後再核對。</p>${templates[active]()}<details class="record-fallback"><summary>查看／複製全堂文字紀錄</summary><label for="record-text" class="small">下載未成功時可保留以下文字（唯讀）</label><textarea id="record-text" readonly class="long"></textarea><button type="button" id="copy-record"><i data-lucide="copy"></i>複製文字紀錄</button></details>`;document.querySelectorAll('[data-field]').forEach(el=>el.value=typeof values[el.dataset.field]==='string'?values[el.dataset.field]:'');document.getElementById('previous').disabled=active===0;document.getElementById('next').disabled=active===4;syncDownloadVisibility();updateSave();syncDerived();updateTimerDisplay();refreshRecord();if(window.lucide)lucide.createIcons();}
 // Each revised activity module shares the existing storage and export helpers.
 templates[0]=()=>window.PartOne.create({get,fields,field,select,ex,ref,esc});
 templates[1]=()=>window.PartTwo.create({get,fields,field,select,ex,ref,esc});
@@ -68,7 +68,7 @@ function record(indices){
  for(const i of indices){
   lines.push(`## 第${parts[i][0]}部分 ${parts[i][1]}`);
   for(const f of fields.values())if(f.part===i)lines.push(f.label+'：',get(f.id)||'〔未填〕','');
-  if(i===4)lines.push('發布決定卡版本核對：',window.PartFive.briefVersion(),'');
+  if(i===4)lines.push('本部分紀錄說明：',window.PartFive.briefVersion(),'');
   if(i===0){
    const old=['observation','inference','alternative','score-reason','rank-a','rank-b','rank-change','change-reason',...['sort-a','sort-b','change-a'].flatMap(p=>[0,1,2,3].map(n=>p+'-'+n))];
    const filled=old.filter(id=>get(id));
