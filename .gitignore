@@ -8,3 +8,10 @@ Thumbs.db
 .build*/
 test-results/
 playwright-report/
+
+# Teacher app: private student data and credentials stay outside Git
+teacher-progress/登入設定.json
+teacher-progress/*.sqlite3*
+teacher-progress/*.db*
+teacher-progress/private/
+teacher-progress/backups/

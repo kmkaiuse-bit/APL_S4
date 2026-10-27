@@ -1,0 +1,12 @@
+登入設定.json
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.pdf
+__pycache__/
+*.pyc
+*.png
+private/
+backups/
+同事閱讀版.json

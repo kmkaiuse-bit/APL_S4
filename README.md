@@ -1,5 +1,7 @@
 # APL S4：AI 教學互動站
 
+教師學生學習追蹤的後端程式放在 [teacher-progress](teacher-progress/README.md)。它需Python及另行提供的私人SQLite資料庫；不會由GitHub Pages執行，也不包含學生紀錄或密碼設定。
+
 以繁體中文呈現第一堂的學生實操、可複製 prompt 及個人紀錄。
 
 ## 2.2 AI與社交媒體：第1堂
