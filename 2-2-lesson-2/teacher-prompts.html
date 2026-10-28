@@ -1,0 +1,159 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教師示範Prompt｜第2堂</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="teacher-prompts.css"><script defer src="teacher-prompts.js"></script></head><body><header class="topbar"><a class="brand" href="teacher.html">教師示範 Prompt · 第2堂</a><div class="actions"><a class="btn" href="draw.html">抽籤工具</a><a class="btn" href="teacher.html">教師檢視</a><a class="btn" href="index.html">課堂互動站</a></div></header><main class="prompt-main"><p class="eyebrow">TEACHER DEMONSTRATION</p><h1>到哪張Slide，就開哪段Prompt。</h1><p class="lead">對應60頁PPT：先看要示範甚麼，準備資料，再複製完整指令。</p><div class="prompt-intro"><p><b>S14：原始links → CSV；S15：整表排序。</b> S12–13是數字及留言狀態講解，S15用Excel，不需要AI Prompt。</p><p>AI結果請課前準備；課堂展示輸入、結果及核對過程。新讀取資料要記錄新時間；本堂分析沿用2026年10月26日固定快照。備案與真正Gemini回答須按實際來源標示。</p><a class="btn" href="assets/source.csv" download>下載本堂固定CSV（製圖／分析用）</a></div><nav class="prompt-nav" aria-label="按投影片找Prompt"><a href="#prompt-s14">S14</a><a href="#prompt-s27">S27</a><a href="#prompt-s28">S28</a><a href="#prompt-s29">S29</a><a href="#prompt-s30">S30</a><a href="#prompt-s31">S31</a><a href="#prompt-s36">S36</a><a href="#prompt-s46">S46</a><a href="#prompt-s54">S54</a></nav><article class="prompt-card" id="prompt-s14"><span class="prompt-tag">Slide 14</span><span class="prompt-time">14:27–14:30</span><h2>原始links → CSV</h2><p><b>老師做甚麼：</b>先貼Y01及Y02連結，展示完整欄位要求；課前保存結果，課堂對原帖核數。</p><p><b>先準備：</b>原帖連結；若讀取失敗，改提供保存的原始文字摘錄。</p><label for="prompt-text-14"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-14" readonly rows="18" spellcheck="false">請讀取以下YouTube影片連結，將原始資料整理成CSV。
+本次示範先處理兩條：
+Y01：https://www.youtube.com/watch?v=B7YTDh34fLo
+Y02：https://www.youtube.com/watch?v=35-MG_Ahfqg
+觀察時間（UTC+8）：〔教師填寫本次實際觀察時間，YYYY-MM-DD HH:MM:SS〕
+
+每條影片一行，欄位名稱及次序必須完全如下：
+post_id,platform,publisher,title,published_date,views,likes,comments,comments_status,duration_seconds_observed,observed_at_taipei,url
+
+欄位要求：
+post_id：沿用上面提供的Y01、Y02，不自行更換。
+platform：來源平台名稱。
+publisher：原始發布者名稱。
+title：完整原標題。
+published_date：發布日期，YYYY-MM-DD。
+views：觀看次數，使用不含千位逗號的整數。
+likes：讚好數，使用整數。
+comments：留言數；只有明確顯示0則才填0；關閉或未知留空。
+comments_status：有公開計數填public_count；明確關閉填disabled；無法確認留空。
+duration_seconds_observed：實際觀察的影片長度，單位秒；不能按標題猜測。
+observed_at_taipei：使用教師提供的實際觀察時間，不自行編造。
+url：對應影片的原帖網址。
+
+只採用實際讀取或我提供的原始資料；讀不到請列明，不能猜測或用舊記憶補數字。
+如果無法讀取連結，先停下並告知需要哪些資料，等我提供保存的原始文字摘錄。
+先提供表格及待確認項目。待我確認後，才輸出UTF-8 CSV；逗號、雙引號及換行須正確轉義。
+這一步只整理資料，不排序、不分析、不製圖。</textarea><pre class="print-prompt" style="display:none">請讀取以下YouTube影片連結，將原始資料整理成CSV。
+本次示範先處理兩條：
+Y01：https://www.youtube.com/watch?v=B7YTDh34fLo
+Y02：https://www.youtube.com/watch?v=35-MG_Ahfqg
+觀察時間（UTC+8）：〔教師填寫本次實際觀察時間，YYYY-MM-DD HH:MM:SS〕
+
+每條影片一行，欄位名稱及次序必須完全如下：
+post_id,platform,publisher,title,published_date,views,likes,comments,comments_status,duration_seconds_observed,observed_at_taipei,url
+
+欄位要求：
+post_id：沿用上面提供的Y01、Y02，不自行更換。
+platform：來源平台名稱。
+publisher：原始發布者名稱。
+title：完整原標題。
+published_date：發布日期，YYYY-MM-DD。
+views：觀看次數，使用不含千位逗號的整數。
+likes：讚好數，使用整數。
+comments：留言數；只有明確顯示0則才填0；關閉或未知留空。
+comments_status：有公開計數填public_count；明確關閉填disabled；無法確認留空。
+duration_seconds_observed：實際觀察的影片長度，單位秒；不能按標題猜測。
+observed_at_taipei：使用教師提供的實際觀察時間，不自行編造。
+url：對應影片的原帖網址。
+
+只採用實際讀取或我提供的原始資料；讀不到請列明，不能猜測或用舊記憶補數字。
+如果無法讀取連結，先停下並告知需要哪些資料，等我提供保存的原始文字摘錄。
+先提供表格及待確認項目。待我確認後，才輸出UTF-8 CSV；逗號、雙引號及換行須正確轉義。
+這一步只整理資料，不排序、不分析、不製圖。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-14">複製 S14 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s27"><span class="prompt-tag">Slide 27</span><span class="prompt-time">15:10–15:12</span><h2>上傳CSV，提出製圖要求</h2><p><b>老師做甚麼：</b>先上傳固定CSV，展示Prompt中的資料、任務及規格。讀數確認後再請AI製圖。</p><p><b>先準備：</b>本堂固定六列source.csv；已保存的製圖結果。</p><label for="prompt-text-27"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-27" readonly rows="12" spellcheck="false">請使用附件原始CSV。先列出post_id、title、views、likes六列資料供核對；CSV沒有short_title欄，不要假設它存在。
+圖上的簡稱請使用以下已核對對照，不改動ID、原標題或數字：
+Y01＝周年短版
+Y02＝周年完整版
+Y03＝DSE打氣
+Y04＝New Balance磁貼
+Y05＝啟德概念店
+Y06＝Sanrio香水
+先完成讀數核對，再製圖。確認後，以程式分別製作觀看次數及讚好數水平長條圖，六則都保留、由多至少、最大在上、數值軸由0開始，標完整數字、單位及資料記錄日期2026年10月26日。
+改善觀看圖時保留完整六則，旁加Y02、Y04、Y05、Y03的數值表，不刪高值，不改數字。
+每張圖寫兩句解釋：引用數字說明觀察，再指出不能證明的事。</textarea><pre class="print-prompt" style="display:none">請使用附件原始CSV。先列出post_id、title、views、likes六列資料供核對；CSV沒有short_title欄，不要假設它存在。
+圖上的簡稱請使用以下已核對對照，不改動ID、原標題或數字：
+Y01＝周年短版
+Y02＝周年完整版
+Y03＝DSE打氣
+Y04＝New Balance磁貼
+Y05＝啟德概念店
+Y06＝Sanrio香水
+先完成讀數核對，再製圖。確認後，以程式分別製作觀看次數及讚好數水平長條圖，六則都保留、由多至少、最大在上、數值軸由0開始，標完整數字、單位及資料記錄日期2026年10月26日。
+改善觀看圖時保留完整六則，旁加Y02、Y04、Y05、Y03的數值表，不刪高值，不改數字。
+每張圖寫兩句解釋：引用數字說明觀察，再指出不能證明的事。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-27">複製 S27 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s28"><span class="prompt-tag">Slide 28</span><span class="prompt-time">15:12–15:15</span><h2>核對觀看圖</h2><p><b>老師做甚麼：</b>展示已生成的觀看圖，回CSV核對六列、排序、數值、單位及0起點；以下是可選核圖追問。</p><p><b>先準備：</b>同一對話內的固定CSV及觀看圖。</p><label for="prompt-text-28"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-28" readonly rows="7" spellcheck="false">請用已上傳的固定CSV核對剛才的觀看次數圖。
+1. 六則影片Y01至Y06是否各出現一次？
+2. 排序是否按views由多至少，最大在上？
+3. 逐一核對圖上數值與CSV，特別指出Y01、Y06及Y03。
+4. 數值軸是否由0開始，單位是否為觀看次數，是否標示2026年10月26日快照？
+列出核對依據；有問題才修正，沒有問題就說明核對通過。不把觀看次數稱為獨立人數，不補造原因或銷售結果。</textarea><pre class="print-prompt" style="display:none">請用已上傳的固定CSV核對剛才的觀看次數圖。
+1. 六則影片Y01至Y06是否各出現一次？
+2. 排序是否按views由多至少，最大在上？
+3. 逐一核對圖上數值與CSV，特別指出Y01、Y06及Y03。
+4. 數值軸是否由0開始，單位是否為觀看次數，是否標示2026年10月26日快照？
+列出核對依據；有問題才修正，沒有問題就說明核對通過。不把觀看次數稱為獨立人數，不補造原因或銷售結果。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-28">複製 S28 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s29"><span class="prompt-tag">Slide 29</span><span class="prompt-time">15:15–15:18</span><h2>觀看圖 → 讚好圖</h2><p><b>老師做甚麼：</b>指出Prompt改用likes，再展示已保存的讚好圖，核對排名改變。</p><p><b>先準備：</b>同一份固定CSV及上一張觀看圖。</p><label for="prompt-text-29"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-29" readonly rows="7" spellcheck="false">沿用已上傳的同一份固定CSV，現在把比較指標由views改成likes。
+先列出六則post_id、title及likes供我核對。確認後，製作讚好數水平長條圖：六則都保留，由多至少、最大在上，數值軸從0開始，標完整數字、讚好單位及2026年10月26日資料日期。
+簡稱沿用Y01周年短版、Y02周年完整版、Y03 DSE打氣、Y04 New Balance磁貼、Y05啟德概念店、Y06 Sanrio香水。
+指出與觀看排序有何不同，引用原數值。兩圖分別讀單位與刻度，不以跨圖長條的厘米長度比較。不推論片長、觀眾或銷售原因。</textarea><pre class="print-prompt" style="display:none">沿用已上傳的同一份固定CSV，現在把比較指標由views改成likes。
+先列出六則post_id、title及likes供我核對。確認後，製作讚好數水平長條圖：六則都保留，由多至少、最大在上，數值軸從0開始，標完整數字、讚好單位及2026年10月26日資料日期。
+簡稱沿用Y01周年短版、Y02周年完整版、Y03 DSE打氣、Y04 New Balance磁貼、Y05啟德概念店、Y06 Sanrio香水。
+指出與觀看排序有何不同，引用原數值。兩圖分別讀單位與刻度，不以跨圖長條的厘米長度比較。不推論片長、觀眾或銷售原因。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-29">複製 S29 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s30"><span class="prompt-tag">Slide 30</span><span class="prompt-time">15:18–15:21</span><h2>追問：讓小數值讀得清楚</h2><p><b>老師做甚麼：</b>展示具體改善追問及已保存的改善圖，說明保留所有紀錄與真實差距。</p><p><b>先準備：</b>固定CSV、原觀看圖；改善後圖。</p><label for="prompt-text-30"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-30" readonly rows="7" spellcheck="false">請改善剛才觀看圖的閱讀方式：
+保留六則影片的完整觀看次數圖、原來數值與0起點，不刪除Y01、Y06或改變數字。
+在圖旁新增小值表，清楚列出Y02、Y04、Y05及Y03的ID、簡稱及views完整數字。
+小值也要依CSV核對，不能將短長條寫成0。保留單位及2026年10月26日快照日期。
+用兩句話解釋這樣如何方便讀數，以及圖表仍不能證明甚麼。</textarea><pre class="print-prompt" style="display:none">請改善剛才觀看圖的閱讀方式：
+保留六則影片的完整觀看次數圖、原來數值與0起點，不刪除Y01、Y06或改變數字。
+在圖旁新增小值表，清楚列出Y02、Y04、Y05及Y03的ID、簡稱及views完整數字。
+小值也要依CSV核對，不能將短長條寫成0。保留單位及2026年10月26日快照日期。
+用兩句話解釋這樣如何方便讀數，以及圖表仍不能證明甚麼。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-30">複製 S30 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s31"><span class="prompt-tag">Slide 31</span><span class="prompt-time">15:21–15:24</span><h2>計算比值，再獨立覆核</h2><p><b>老師做甚麼：</b>展示Prompt及結果，然後用計算機輸入589 ÷ 24660 × 1000核對。</p><p><b>先準備：</b>固定CSV、已保存計算結果、計算機。</p><label for="prompt-text-31"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-31" readonly rows="7" spellcheck="false">請只用固定CSV，列出Y01及Y02的原始讚好與觀看數，計算讚好÷觀看×1000，保留四位小數；解釋這是公開計數比值，不是獨立人數比例或購買轉換率。</textarea><pre class="print-prompt" style="display:none">請只用固定CSV，列出Y01及Y02的原始讚好與觀看數，計算讚好÷觀看×1000，保留四位小數；解釋這是公開計數比值，不是獨立人數比例或購買轉換率。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-31">複製 S31 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s36"><span class="prompt-tag">Slide 36</span><span class="prompt-time">15:35–15:38；S38–40學生操作</span><h2>圈出Prompt四元素</h2><p><b>老師做甚麼：</b>S36指出角色、任務、背景、限制；S38–40才由學生上傳CSV、送出及保存實際回答。</p><p><b>先準備：</b>固定CSV；學生自己的AI對話。</p><label for="prompt-text-36"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-36" readonly rows="15" spellcheck="false">[Role 角色]
+你是一名社交媒體數據分析助理，協助學生整理及核對公開數據。
+
+[Task 任務]
+1. 按觀看數排序，再按讚好數排序，指出第一名是否相同。
+2. 比較Y01與Y02：列出觀看、讚好及留言的實際數字；計算每1000次觀看對應的讚好數。
+3. 指出Y04與Y05的留言狀態有何不同。
+4. 用最多三句：一項有數據支持的觀察、一項不能從資料知道的事，以及下一輪建議補收的資料。
+
+[Context 背景]
+以下是7-Eleven Hong Kong官方YouTube帳戶六則影片的公開頁面快照，觀察日期2026年10月26日。這六則不是六個獨立企劃，Y01及Y02是同一周年企劃的不同版本。
+
+[Constraint 限制]
+只按附表分析，不上網補數字。每1000次觀看對應的讚好數保留四位小數，並說明公式；這是公開計數比值，不是完整互動率或購買轉換率。comments_status為disabled時，comments留空，不當成0。不要聲稱這是隨機實驗，不推論投放費用、自然流量、觀看完成率、創意因果或銷售。</textarea><pre class="print-prompt" style="display:none">[Role 角色]
+你是一名社交媒體數據分析助理，協助學生整理及核對公開數據。
+
+[Task 任務]
+1. 按觀看數排序，再按讚好數排序，指出第一名是否相同。
+2. 比較Y01與Y02：列出觀看、讚好及留言的實際數字；計算每1000次觀看對應的讚好數。
+3. 指出Y04與Y05的留言狀態有何不同。
+4. 用最多三句：一項有數據支持的觀察、一項不能從資料知道的事，以及下一輪建議補收的資料。
+
+[Context 背景]
+以下是7-Eleven Hong Kong官方YouTube帳戶六則影片的公開頁面快照，觀察日期2026年10月26日。這六則不是六個獨立企劃，Y01及Y02是同一周年企劃的不同版本。
+
+[Constraint 限制]
+只按附表分析，不上網補數字。每1000次觀看對應的讚好數保留四位小數，並說明公式；這是公開計數比值，不是完整互動率或購買轉換率。comments_status為disabled時，comments留空，不當成0。不要聲稱這是隨機實驗，不推論投放費用、自然流量、觀看完成率、創意因果或銷售。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-36">複製 S36 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s46"><span class="prompt-tag">Slide 46</span><span class="prompt-time">16:16–16:19</span><h2>追問：修正未證實的原因</h2><p><b>老師做甚麼：</b>展示假設例句、具體追問及課前真實回答；檢查是否保留有支持的數字，撤回未證實因果。</p><p><b>先準備：</b>固定CSV、已保存輸入及回答；假設例句要清楚標示。</p><label for="prompt-text-46"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-46" readonly rows="9" spellcheck="false">請檢查以下說法：
+「完整版讚好較多，是因為影片較長。」
+
+只根據本堂固定CSV：
+1. 指出哪部分有數據支持，引用兩版數字。
+2. 指出哪部分尚未證實，列出需要補充的比較資料。
+3. 改寫成較準確的分析，保留有支持的發現。
+不要補造原因或新增數字。</textarea><pre class="print-prompt" style="display:none">請檢查以下說法：
+「完整版讚好較多，是因為影片較長。」
+
+只根據本堂固定CSV：
+1. 指出哪部分有數據支持，引用兩版數字。
+2. 指出哪部分尚未證實，列出需要補充的比較資料。
+3. 改寫成較準確的分析，保留有支持的發現。
+不要補造原因或新增數字。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-46">複製 S46 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><article class="prompt-card" id="prompt-s54"><span class="prompt-tag">Slide 54</span><span class="prompt-time">16:42–16:45</span><h2>按四項標準檢查建議</h2><p><b>老師做甚麼：</b>展示Prompt，按證據、推論、行動、限制核對回答，最後由人作判斷。</p><p><b>先準備：</b>固定CSV、已保存輸入與檢查回答。</p><label for="prompt-text-54"><b>完整Prompt（可直接複製）</b></label><textarea id="prompt-text-54" readonly rows="13" spellcheck="false">請根據本堂固定CSV，檢查以下建議：
+「完整版有589個讚好，比短版150個多。
+以後全部改做長片，就能增加銷售。」
+
+分別檢查：
+1. 證據：引用數字是否符合資料？
+2. 推論：有沒有超出資料的原因或銷售說法？
+3. 行動：下一步是否清楚、可以實行？還需要哪些安排？
+4. 限制：有沒有交代仍然未知的事？
+
+每項引用資料或指出缺口，最後提出較準確的改寫。
+只用固定CSV，不上網補數字，不補造原因或銷售結果。</textarea><pre class="print-prompt" style="display:none">請根據本堂固定CSV，檢查以下建議：
+「完整版有589個讚好，比短版150個多。
+以後全部改做長片，就能增加銷售。」
+
+分別檢查：
+1. 證據：引用數字是否符合資料？
+2. 推論：有沒有超出資料的原因或銷售說法？
+3. 行動：下一步是否清楚、可以實行？還需要哪些安排？
+4. 限制：有沒有交代仍然未知的事？
+
+每項引用資料或指出缺口，最後提出較準確的改寫。
+只用固定CSV，不上網補數字，不補造原因或銷售結果。</pre><div class="prompt-actions"><button class="btn primary" type="button" data-copy-prompt="prompt-text-54">複製 S54 Prompt</button><span class="prompt-status" role="status" aria-live="polite"></span></div></article><section class="prompt-card"><h2>S24、S60 怎樣操作？</h2><p><b>S24：</b>展示已保存分析，回CSV逐句核數；不用即場重新生成。</p><p><b>S60：</b>示範下載完整PDF，再到CMS的Student Progress作業上傳並確認狀態；不用AI Prompt。</p><a class="btn" href="index.html#submit">打開PDF及CMS提交指引</a></section></main></body></html>
