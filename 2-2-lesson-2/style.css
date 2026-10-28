@@ -2,3 +2,7 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}@media print{.topbar,.sidebar,footer,.actions,.task-end,button,dialog{display:none!important}.shell{display:block}main{max-width:none;padding:0}.panel{box-shadow:none;break-inside:avoid}.hero{color:black;background:white}.hero .lead{color:#333}textarea{min-height:80px}.hero-pictures{display:none}}
 
 .recommendation-card dd{overflow-wrap:anywhere}.recommendation-card h3{font-size:18px}.recommendation-card p strong{font-size:16px}
+
+.bonus-entry h2{margin-top:12px}.bonus-entry .muted{max-width:760px}#bonus-preview-a,#bonus-preview-b{min-height:90px;max-height:none;font-size:15px}.bonus-entry .btn{min-height:44px}@media(max-width:800px){#nav{grid-template-columns:repeat(2,minmax(0,1fr))}#nav .nav-item:last-child{grid-column:1/-1}.nav-item small{font-size:10px}}
+
+.cms-steps{padding-left:24px}.cms-steps li{margin:12px 0;font-size:15px}.cms-address{overflow-wrap:anywhere;font-size:14px}.panel code{overflow-wrap:anywhere;white-space:normal}@media(max-width:800px){#nav a[href="#bonus"],#nav a[href="#submit"]{grid-column:1/-1}}
