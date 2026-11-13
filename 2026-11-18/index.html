@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d32">
+  <meta name="description" content="11月18日 APL 2.2第3堂：用AI分析32篇貼文和48則留言，核對後寫月報。">
+  <title>11月18日｜APL 2.2第3堂互動網站</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至主內容</a>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-icon">APL<span>↗</span></span><span>AI與社交媒體<small>2.2 第3堂 · 2026年11月18日</small></span></a>
+  <nav aria-label="課堂部分"><a href="#home">總覽</a><a href="#task-a">A 貼文看板</a><a href="#task-b">B 留言雷達</a><a href="#task-c">C 月報</a><a href="#submit">匯出紀錄</a></nav>
+  <span id="save-status" role="status">紀錄留在此瀏覽器</span>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" id="home">
+    <p class="eyebrow">APL 應用學習 · 14:00–17:00</p>
+    <h1>用 AI 分析社交媒體數據</h1>
+    <p>從32篇貼文和48則留言，走到有數字、分母和限制的下一步建議。</p>
+    <div class="hero-tags"><span>160分鐘教學</span><span>15:00／16:00各小休10分鐘</span><span>跟老師指示開屏</span></div>
+  </section>
+  <aside class="notice"><strong>資料界線：</strong>本堂兩份CSV均為學校模擬資料。只上載提供的學生版CSV到Gemini；不要輸入真實用戶留言、個人資料或教師參考答案。貼文只有相對第1–8週，留言日期是2026年5–6月，不能合併成同月成效。</aside>
+  <section class="overview" aria-label="課堂主線">
+    <div><b>14:15–14:45</b><strong>A｜貼文看板</strong><span>老師用Sheets示範兩圖；你用Gemini分析並核對原表。</span></div>
+    <div><b>15:25–15:55</b><strong>B｜留言雷達</strong><span>48則分類、交叉表、五則人手抽查。</span></div>
+    <div><b>16:20–16:50</b><strong>C｜一頁月報</strong><span>先決定，再用Gemini整理，最後人手定稿。</span></div>
+  </section>
+
+  <section id="task-a" class="lesson-section">
+    <div class="section-head"><span class="step">A</span><div><p class="eyebrow">工作紙 A1–A5 · S05–S24</p><h2>數據看板</h2><p>先說你要回答甚麼，再選指標。老師未開屏時請看投影和工作紙。</p></div></div>
+    <div class="resource-row"><a class="button" href="2026-11-18_32篇貼文_學生版.csv" download>下載32篇貼文CSV</a><a class="button secondary" href="2026-11-18_2.2第3堂_學生工作紙_列印版_v1.pdf" download>下載工作紙PDF</a><button type="button" id="copy-prompt-a" class="button secondary">複製 S10 貼文分析 Prompt</button><a class="button secondary" href="../2026-11-04/">返回11月4日課堂</a></div>
+    <details class="prompt-box"><summary>先讀任務，再展開 Prompt</summary><pre id="prompt-a">請根據我上載的32篇貼文CSV分析。先檢查是否有32個不同post_id，有沒有遺漏或重複。逐篇計算互動總數＝likes＋comments＋shares＋saves，列出post_id與計算值。再按post_type列出篇數、互動總和、每篇平均互動，以及「先逐篇計算互動總數÷reach，再求該類平均」的平均單篇互動率。最後按week列每週互動總數。每一步寫清楚分子、分母和單位。資料沒有提供的品牌、銷量、轉換或原因，請寫「無法判斷」。先只給計算與表格，不給商業建議。</pre></details>
+    <article class="panel"><h3>A1｜先選決策問題 <small>S05–S06</small></h3><div class="two"><label>這次的目標<select data-field="aGoal"><option value="">請選擇</option><option value="avg">增加每篇互動</option><option value="rate">提高觸及後反應</option></select></label><label>你選的指標<select data-field="aMetric"><option value="">請選擇</option><option value="avg">每篇平均互動</option><option value="rate">平均單篇互動率</option></select></label></div><label>分母是甚麼？<input data-field="aDenominator" placeholder="例如：該類貼文篇數"></label><button type="button" id="check-a1" class="button small">核對目標與指標</button><p id="feedback-a1" class="feedback" role="status"></p></article>
+    <article class="panel"><h3>A2｜六類貼文 <small>S07–S18</small></h3><p>把Gemini給的結果填入。原CSV的「迷因/趣味」與投影片的「迷因／趣味」是同一類。</p><div class="table-wrap"><table id="post-table"><thead><tr><th>類型</th><th>篇數</th><th>平均互動／篇</th><th>平均單篇互動率 %</th></tr></thead><tbody></tbody></table></div><button type="button" id="check-a2" class="button small">用原CSV核對</button><p id="feedback-a2" class="feedback" role="status"></p></article>
+    <article class="panel"><h3>A3｜讀兩張圖 <small>S12–S13</small></h3><p>老師展示長條圖及折線圖後，寫下你讀到的值。<strong>圖表描述變化，不能單獨證明原因。</strong></p><div class="four"><label>平均互動最高的類型<input data-field="aHighestType"></label><label>平均互動最低的類型<input data-field="aLowestType"></label><label>第3週互動總數<input data-field="aWeek3" inputmode="numeric"></label><label>第8週互動總數<input data-field="aWeek8" inputmode="numeric"></label></div></article>
+    <article class="panel"><h3>A4｜核對一篇原文數字 <small>S11、S18</small></h3><div class="two"><label>選一個 post_id<select id="post-id" data-field="aPostId"></select></label><label>Gemini算出的四項互動合計<input data-field="aAiTotal" inputmode="numeric"></label></div><div id="post-source" class="source-line"></div><button type="button" id="check-a4" class="button small">與原表比較</button><p id="feedback-a4" class="feedback" role="status"></p><label>你怎樣核對？若不同，可能是哪一步出錯？<textarea data-field="aVerifyReason"></textarea></label></article>
+    <article class="panel"><h3>A5｜三句洞察及內容決策 <small>S19–S24</small></h3><p>每句標明範圍、數字和單位；留意樣本數與資料不能證明的事。</p><label>句一：最高類型及每篇平均互動<textarea data-field="aInsight1"></textarea></label><label>句二：第3週與第8週的差異<textarea data-field="aInsight2"></textarea></label><label>句三：穿搭教學與顧客分享兩個指標的排序<textarea data-field="aInsight3"></textarea></label><label>下一階段選哪項內容安排？<select data-field="aDecision"><option value="">請選擇</option><option>多發迷因／趣味</option><option>測試顧客分享</option><option>保留穿搭教學</option><option>其他有數據支持的安排</option></select></label><label>數據依據及仍要觀察甚麼？<textarea data-field="aDecisionReason"></textarea></label></article>
+  </section>
+
+  <section id="task-b" class="lesson-section">
+    <div class="section-head"><span class="step">B</span><div><p class="eyebrow">工作紙 B1–B5 · S25–S44</p><h2>留言情感雷達</h2><p>先對48則逐列分類，再看交叉表；保留原文及人手修訂理由。</p></div></div>
+    <div class="resource-row"><a class="button" href="2026-11-18_48則留言_學生版.csv" download>下載48則留言CSV</a><button type="button" id="copy-prompt-b" class="button secondary">複製 S31 批量分類 Prompt</button></div>
+    <details class="prompt-box"><summary>展開 Prompt 與分類字典</summary><pre id="prompt-b">根據我上載的學生版48則留言CSV，逐列輸出comment_id、主要主題、情感及一句原文依據。主題只能選產品／查詢、物流、服務、價格、品質；「品質」包括物料、耐用、瑕疵及App／網頁購買體驗。情感只能選正面、負面、中性。C001–C048每個ID保留一次；無法判斷標「需人手檢查」。先輸出48列，再統計主題×情感；不要補造留言或直接寫建議。</pre><p>學生CSV只有五欄，不含教師答案。主題與情感要分開判斷。</p></details>
+    <article class="panel"><h3>B1｜先判兩個邊界例 <small>S26–S30</small></h3><div id="boundary-cards" class="two"></div></article>
+    <article class="panel"><h3>B2｜貼上 Gemini 的48列結果 <small>S31–S35</small></h3><p>可貼 Markdown 表格、TSV 或 CSV；系統只讀取每列的 ID、主題、情感。亦可逐列在下表選擇。<strong>這裏不會代替Gemini分類。</strong></p><label>Gemini逐列結果<textarea id="paste-classification" class="tall" placeholder="例如：| C001 | 產品／查詢 | 正面 | 原句依據... |"></textarea></label><div class="resource-row"><button type="button" id="import-classification" class="button">匯入到48列表</button><button type="button" id="check-b2" class="button secondary">檢查ID及交叉表</button></div><p id="feedback-b2" class="feedback" role="status"></p><div class="table-wrap"><table id="classification-table"><thead><tr><th>ID</th><th>留言原文</th><th>AI主題</th><th>AI情感</th></tr></thead><tbody></tbody></table></div><h4>你目前的主題 × 情感交叉表</h4><div id="cross-tab"></div></article>
+    <article class="panel"><h3>B3｜人手抽查五則 <small>S36–S39</small></h3><p>抽五個不同ID，至少一則不確定。記下原句線索、AI標籤、人手判斷和理由。五則抽查用於找可疑分類，<strong>不能推算全表準確率</strong>。</p><div id="audit-rows"></div><p id="audit-feedback" class="feedback" role="status"></p><div id="revised-cross-tab"></div></article>
+    <article class="panel"><h3>B4–B5｜哪個問題先回應？ <small>S41–S44</small></h3><p>可比較負面留言<strong>件數</strong>，也可比較該類內的<strong>負面比例</strong>；先說目標與分母。</p><label>我們先處理<select data-field="bPriority"><option value="">請選擇</option><option>產品／查詢</option><option>物流</option><option>服務</option><option>價格</option><option>品質</option></select></label><label>理由：用兩組數字、指標及分母說明<textarea data-field="bPriorityReason"></textarea></label><label>另一個指標提醒我們甚麼？48則模擬留言不能告訴我們甚麼？<textarea data-field="bLimit"></textarea></label></article>
+  </section>
+
+  <section id="task-c" class="lesson-section">
+    <div class="section-head"><span class="step">C</span><div><p class="eyebrow">工作紙 C1–C2 · S45–S59</p><h2>一頁月報格式練習</h2><p>貼文與留言是不同期間的模擬資料，分開寫；先由你們決定行動，再請Gemini整理。</p></div></div>
+    <article class="panel"><h3>C1｜改寫過度推論 <small>S46</small></h3><blockquote>「迷因最紅，所以只發迷因；物流最差，所以停止送貨。」</blockquote><label>選一句，改成有數字、有限制的建議<textarea data-field="cCorrection"></textarea></label></article>
+    <article class="panel"><h3>C2｜四格月報 <small>S48–S55</small></h3><label>① 貼文表現：第1–8週、篇數、平均互動或互動率<textarea data-field="cPosts"></textarea></label><label>② 留言情感：2026年5–6月、負面幾則／該類幾則<textarea data-field="cComments"></textarea></label><label>③ 兩項行動：內容安排＋顧客回應安排<textarea data-field="cActions"></textarea></label><label>④ 下階段如何驗證？資料限制是甚麼？<textarea data-field="cValidation"></textarea></label><button type="button" id="copy-prompt-c" class="button secondary">用四格內容組成 S52 Gemini Prompt 並複製</button><p id="feedback-c" class="feedback" role="status"></p><label>Gemini整理的原稿<textarea data-field="cAiDraft" class="tall"></textarea></label><label>小組人手定稿<textarea data-field="cFinal" class="tall"></textarea></label><p id="final-count" class="muted">定稿字數：0</p></article>
+    <article class="panel"><h3>退出題 <small>S58–S59</small></h3><label>Gemini幫我做了甚麼？<input data-field="exitAi"></label><label>我用原始數據核對了甚麼？<input data-field="exitVerify"></label><label>最後由我決定了甚麼？<input data-field="exitHuman"></label></article>
+  </section>
+
+  <section id="submit" class="lesson-section">
+    <div class="section-head"><span class="step">✓</span><div><p class="eyebrow">S60 · 最後開屏</p><h2>保存及交收</h2><p>本網站不會自動交功課。先下載紀錄，再按老師指定平台提交。</p></div></div>
+    <div class="panel"><div class="two"><label>組別／識別碼<input data-field="groupId" placeholder="例如：G03"></label><label>組員（可只寫座號）<input data-field="members"></label></div><div id="completion" class="notice"></div><div class="resource-row"><button type="button" id="download-json" class="button">下載完整JSON紀錄</button><button type="button" id="print-record" class="button secondary">列印作答紀錄</button><label class="button secondary upload">匯入舊紀錄<input id="import-json" type="file" accept="application/json,.json" hidden></label></div><p class="muted">答案只保存在此瀏覽器。共用電腦請下載後按「清除此機紀錄」，並確認下載檔案已保存。</p><button type="button" id="clear-record" class="text-button">清除此機紀錄</button></div>
+  </section>
+</main>
+<footer>HKIT APL · 按老師開屏安排使用。資料及分類輸出只作學校模擬練習。</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>
