@@ -55,8 +55,8 @@
   const classificationRules='主題只能選：產品／查詢（產品、尺碼、分店或優惠查詢）、物流（送貨、到貨、活動補貨／缺貨）、服務（員工、客服、退貨流程、贈品）、價格（售價貴平、折扣是否抵買）、品質（物料、耐用、瑕疵、包裝、App／網頁體驗）。情感只能選正面、負面、中性。每則只選一個主要主題，按原文判斷；無法判斷時標「需人手檢查」，不得猜測。';
   function classificationPrompt(first,last) {
     const range=`${first}–${last}`;
-    const batch=first==='C001'&&last==='C048' ? '請列出全部48個不同comment_id，不能省略、合併或只給摘要。48列完成後，再按主題×情感統計；交叉表五類總數應為48。' : `這次只處理${range}的24則；逐列完整列出24個不同comment_id。暫時不要統計或寫建議，待兩批合併後才做交叉表。`;
-    return `請根據我上載的學生版48則留言CSV，只分析${range}。${classificationRules}以Markdown表格逐列輸出四欄：comment_id｜主要主題｜情感｜一句原文依據。${batch}不得新增留言、跳號或直接寫商業建議。`;
+    const batch=first==='C001'&&last==='C048' ? '必須列出48個不同comment_id，從C001到C048各一次。' : `這次只列${range}的24個不同comment_id；其餘留待另一批。`;
+    return `請根據我上載的學生版48則留言CSV，分類${range}。${classificationRules}${batch}每個ID只輸出一行短標籤，格式為C001|物流|負面。不要重複留言原文，不要原文依據、解說、Markdown表格、合計或建議。網站會自行檢查ID與計算交叉表；稍後我們只抽查五則原文。`;
   }
   $('#prompt-b').textContent=classificationPrompt('C001','C048');
   $('#prompt-b1').textContent=classificationPrompt('C001','C024');
@@ -110,7 +110,7 @@
     $('#missing-panel').hidden=!show;
     if(!show)return;
     $('#missing-list').textContent=`待補或標籤不完整：${missing.join('、')}（${missing.length}則）。先對照下表原文，再請Gemini只補這些ID。`;
-    $('#missing-prompt').textContent=`請只根據剛才上載的學生版48則留言CSV，補齊以下comment_id：${missing.join('、')}。${classificationRules}請按原CSV原文逐列輸出comment_id｜主要主題｜情感｜一句原文依據；只列這${missing.length}則，不重做其他ID，不要猜測缺少的原文或直接寫建議。`;
+    $('#missing-prompt').textContent=`請只根據剛才上載的學生版48則留言CSV，補齊以下comment_id：${missing.join('、')}。${classificationRules}每個ID只輸出一行，格式為C001|物流|負面；只列這${missing.length}則，不重複原文或解說，不重做其他ID，不要猜測。`;
   }
   function renderImportHistory() {
     $('#import-count').textContent=String(state.rawImports.length);
