@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#123d32" name="theme-color"/>
 <meta content="11月18日 APL 2.2第3堂：用AI分析32篇貼文和48則留言，核對後寫月報。" name="description"/>
-<title>11月18日｜APL 2.2第3堂互動網站</title>
+<title>11月18日｜APL 2.2第3堂互動網站（學生工具與教師示範 v5）</title>
 <link href="style.css" rel="stylesheet"/>
 <script defer="" src="data.js"></script>
 <script defer="" src="app.js"></script>
@@ -15,7 +15,7 @@
 <a class="skip" href="#main">跳至主內容</a>
 <header class="topbar">
 <a class="brand" href="#home"><span class="brand-icon">APL<span>↗</span></span><span>AI與社交媒體<small>2.2 第3堂 · 2026年11月18日</small></span></a>
-<nav aria-label="課堂部分"><a href="#home">總覽</a><a href="#video-guide">新聞片</a><a href="#task-a">A 貼文看板</a><a href="#task-b">B 留言雷達</a><a href="#task-c">C 月報</a><a href="#submit">匯出紀錄</a></nav>
+<nav aria-label="課堂部分"><a href="#home">總覽</a><a href="#video-guide">分段影片</a><a href="#task-a">A 貼文看板</a><a href="#task-b">B 留言雷達</a><a href="#task-c">C 月報工具</a><a href="#submit">保存紀錄</a></nav>
 <span id="save-status" role="status">紀錄留在此瀏覽器</span>
 </header>
 <main class="wrap" id="main">
@@ -23,68 +23,203 @@
 <p class="eyebrow">APL 應用學習 · 14:00–17:00</p>
 <h1>用 AI 分析社交媒體數據</h1>
 <p>從32篇貼文和48則留言，走到有數字、分母和限制的下一步建議。</p>
-<div class="hero-tags"><span>160分鐘教學</span><span>15:00／16:00各小休10分鐘</span><span>跟老師指示開屏</span></div>
+<div class="hero-tags"><span>紙本短答＋電子月報，各交一次</span><span>網站供下載CSV、複製Prompt、計交叉表與查原文</span><span>內建教師課堂一鍵Demo</span></div>
 </section>
-<aside class="notice"><strong>資料界線：</strong>本堂兩份CSV均為學校模擬資料。只上載提供的學生版CSV到Gemini；不要輸入真實用戶留言、個人資料或教師參考答案。貼文只有相對第1–8週，留言日期是2026年5–6月，不能合併成同月成效。</aside>
+<aside class="notice"><b>作答與私隱分工：</b>紙本記A、B短答與抽查理由；V題先口答、可記關鍵詞；C1口答。C2月報原稿、定稿與核對說明只在網站保存一次，離線才用紙本後備。AI分類48則，學生只抽查5則，不逐行手填。<b>嚴禁上載真實用戶留言、個人資料或教師參考答案欄。</b></aside>
 <section aria-label="課堂主線" class="overview">
-<div><b>14:06–14:16</b><strong>主片第一段</strong><span>曝光與觀看；S06停片後完成V1。</span></div>
-<div><b>14:16–14:42</b><strong>A｜貼文看板</strong><span>老師用Sheets示範兩圖；你用Gemini分析並核對原表。</span></div>
-<div><b>14:42–14:51</b><strong>主片第二段</strong><span>店舖成效；S22停片後完成V2。</span></div>
-<div><b>14:51–15:00</b><strong>A｜作出內容決策</strong><span>回到貼文圖表；完成工作紙A5。</span></div>
-<div><b>15:10–15:17</b><strong>主片第三段</strong><span>顧客分享與假數據；S30停片後完成V3。</span></div>
-<div><b>15:17–16:00</b><strong>B｜留言雷達</strong><span>48則分類、交叉表、五則人手抽查。</span></div>
-<div><b>16:10–17:00</b><strong>C｜一頁月報</strong><span>先決定，再用Gemini整理，最後人手定稿。</span></div>
+<div><b>14:17–15:00</b><strong>A｜貼文看板（S07–S28）</strong><span>老師示範兩輪Prompt製圖；你用Gemini算表並核對P001及第8週。</span></div>
+<div><b>15:18–16:00</b><strong>B｜留言雷達（S31–S50）</strong><span>B1紙本判兩則；Gemini批量48行短標籤一次貼入網站計表，B3抽查5則原文。</span></div>
+<div><b>16:10–17:00</b><strong>C｜一頁月報（S51–S66）</strong><span>先決定兩項行動，再用Gemini整理120–160字初稿，人手核對定稿。</span></div>
 </section>
 <section class="lesson-section" id="video-guide">
-<div class="section-head"><span class="step">V</span><div><p class="eyebrow">工作紙 V1–V3 · S05–S06、S21–S22、S29–S30</p><h2>《新聞透視》分段觀看</h2><p>老師控制播放和停片；鎖屏時在紙本工作紙作答。這裏供課後回看，不需要邊看片邊操作電腦。</p></div></div>
-<div class="resource-row"><a class="button" href="https://www.youtube.com/watch?v=ZevwFKdSqck" rel="noopener" target="_blank">TVB 官方完整版（22:30）</a><a class="button secondary" download="" href="2026-11-18_2.2第3堂_學生工作紙_列印版_v3.pdf">下載新版工作紙PDF</a></div>
-<article class="panel"><h3>S05–S06｜00:00–09:01：曝光與觀看</h3><p>暫停後回答V1：近7,000萬粉絲是帳戶規模；百萬級觀看是新片預期。還欠甚麼可核對的成效資料？</p><label>我的判斷與理由<textarea data-field="videoV1"></textarea></label></article>
-<article class="panel"><h3>S21–S22｜09:01–16:39：店舖成效</h3><p>暫停後回答V2：下次再付費合作前，店舖應記錄哪些原始數據？</p><label>我會記錄和比較<textarea data-field="videoV2"></textarea></label></article>
-<article class="panel"><h3>S29–S30｜16:39–22:30：顧客分享與假數據</h3><p>暫停後回答V3：應如何判斷網紅合作是否值得繼續？用「目標、數據、比較、限制」寫一句。</p><label>小組建議<textarea data-field="videoV3"></textarea></label></article>
-<p class="muted">新聞片是真實案例；32篇貼文和48則留言CSV是學校模擬資料，不能合併成同一品牌的成效。</p>
+<div class="section-head"><span class="step">V</span><div><p class="eyebrow">工作紙 V1–V3 · S05–S06、S21–S22、S29–S30（鎖屏紙本作答）</p><h2>分段影片播放與停片題目</h2><p>老師控制播放和停片；學生在<strong>紙本工作紙 V1–V3</strong> 可記關鍵詞，無須在此打字。本堂使用港台影片：</p></div></div>
+<div class="resource-row">
+
+
+
+
+<a class="button" download="" href="學生工作紙_港台版_v5.pdf">下載學生工作紙 v5（港台版）</a></div>
+
+<div class="panel" id="video-cards-rthk">
+<h3>港台《鏗鏘集：AI反轉職場》（23:36）｜三個起播時間點</h3>
+<div class="resource-row">
+<a class="button" href="https://www.youtube.com/watch?v=CNdUdnCa0cI&amp;t=0s" rel="noopener" target="_blank">① S05 由 00:00 播放（10:31 停）↗</a>
+<a class="button secondary" href="https://www.youtube.com/watch?v=CNdUdnCa0cI&amp;t=631s" rel="noopener" target="_blank">② S21 由 10:31 播放（17:07 停）↗</a>
+<a class="button secondary" href="https://www.youtube.com/watch?v=CNdUdnCa0cI&amp;t=1027s" rel="noopener" target="_blank">③ S29 由 17:07 播放（23:36 停）↗</a>
+</div>
+<p class="source-line"><p><b>V1（S06口答，可記關鍵詞）：</b>單憑片中受訪者的求職經驗，能否判斷全港所有僱主都有相同的AI要求？</p><p><b>V2（S22口答，可記關鍵詞）：</b>以片中的照片分析或簡報整理為例，你會回到甚麼原始資料，核對哪一項結果？</p><p><b>V3（S30口答，可記關鍵詞）：</b>在接下來的留言分析中，你會保留哪一項證據，讓別人核對你的判斷？</p></p>
+</div>
 </section>
 <section class="lesson-section" id="task-a">
-<div class="section-head"><span class="step">A</span><div><p class="eyebrow">工作紙 A1–A5 · S07–S28</p><h2>數據看板</h2><p>先說你要回答甚麼，再選指標。老師未開屏時請看投影和工作紙。</p></div></div>
-<div class="resource-row"><a class="button" download="" href="2026-11-18_32篇貼文_學生版.csv">下載32篇貼文CSV</a><a class="button secondary" download="" href="2026-11-18_2.2第3堂_學生工作紙_列印版_v3.pdf">下載工作紙PDF</a><button class="button secondary" id="copy-prompt-a" type="button">複製 S12 貼文分析 Prompt</button><a class="button secondary" href="../2026-11-04/">返回11月4日課堂</a></div>
-<details class="prompt-box"><summary>先讀任務，再展開 Prompt</summary><div class="prompt-elements"><p><b>角色 Role</b>你是社交貼文數據分析助理。</p><p><b>任務 Task</b>逐篇及按類型計算，最後列每週互動總數。</p><p><b>資料 Context</b>學校模擬的32篇貼文CSV；第1–8週。</p><p><b>限制 Constraint</b>查ID、列公式和分母；不推斷銷售或成因。</p></div><pre id="prompt-a">角色：你是社交貼文數據分析助理。
+<div class="section-head"><span class="step">A</span><div><p class="eyebrow">工作紙 A1–A5 · S07–S28（14:40–14:47 開屏操作）</p><h2>貼文數據看板與兩輪 Prompt 製圖</h2><p>下載32篇貼文CSV交給Gemini計算，核對六類表與P001；紙本A2只填兩行關鍵比較，不用手抄18格。</p></div></div>
+<div class="resource-row">
+<a class="button" download="" href="2026-11-18_32篇貼文_學生版.csv">下載32篇貼文CSV</a>
+<button class="button secondary" id="copy-prompt-a" type="button">複製 S12 貼文分析 Prompt</button>
+<button class="button secondary small" id="demo-fill-a2" type="button">教師示範：一鍵填入已核對六類數據與算式</button>
+</div>
+<details class="prompt-box"><summary>S12｜展開貼文分析 Prompt 四元素（Role／Task／Context／Constraint）</summary>
+<div class="prompt-elements">
+<p><b>角色 Role</b>你是社交貼文數據分析助理。</p>
+<p><b>任務 Task</b>逐篇及按類型計算，最後列每週互動總數。</p>
+<p><b>資料 Context</b>學校模擬的32篇貼文CSV；第1–8週。</p>
+<p><b>限制 Constraint</b>查ID、列公式和分母；不推斷銷售或成因。</p>
+</div>
+<pre id="prompt-a">角色：你是社交貼文數據分析助理。
 資料：我上載的是學校模擬的32篇貼文CSV，涵蓋第1–8週。
 任務：先檢查是否有32個不同post_id，有沒有遺漏或重複。逐篇計算互動總數＝likes＋comments＋shares＋saves，列出post_id與計算值。再按post_type列出篇數、互動總和、每篇平均互動，以及「先逐篇計算互動總數÷reach×100%，再求該類平均」的平均單篇互動率。最後按week列每週互動總數。
 限制：每一步寫清楚分子、分母和單位。資料沒有提供的品牌、銷量、轉換或原因，請寫「無法判斷」。先只給計算與表格，不給商業建議。</pre></details>
-<p class="source-line"><strong>資料界線：</strong>32篇貼文CSV只有週次、類型、互動數和觸及，沒有貼文正文或圖片。網站顯示同一批數字，不能用來分析貼文語氣或創意內容。</p><article class="panel"><h3>A1｜先選決策問題 <small>S07–S08</small></h3><div class="two"><label>這次的目標<select data-field="aGoal"><option value="">請選擇</option><option value="avg">增加每篇互動</option><option value="rate">提高觸及後反應</option></select></label><label>你選的指標<select data-field="aMetric"><option value="">請選擇</option><option value="avg">每篇平均互動</option><option value="rate">平均單篇互動率</option></select></label></div><label>分母是甚麼？<input data-field="aDenominator" placeholder="例如：該類貼文篇數"/></label><button class="button small" id="check-a1" type="button">核對目標與指標</button><p class="feedback" id="feedback-a1" role="status"></p></article>
-<article class="panel"><h3>A2｜六類貼文 <small>S09–S20</small></h3><p>把Gemini給的結果填入。原CSV的「迷因/趣味」與投影片的「迷因／趣味」是同一類。</p><div class="table-wrap"><table id="post-table"><thead><tr><th>類型</th><th>篇數</th><th>平均互動／篇</th><th>平均單篇互動率 %</th></tr></thead><tbody></tbody></table></div><div class="four"><label>P001四項互動合計<input data-field="aP001Total" inputmode="numeric" placeholder="次"/></label><label>P001觸及<input data-field="aP001Reach" inputmode="numeric"/></label><label>P001互動率<input data-field="aP001Rate" inputmode="decimal" placeholder="%"/></label><label>六類篇數合計<input data-field="aCategoryTotal" inputmode="numeric"/></label></div><div class="two"><label>穿搭與顧客分享：平均互動差<input data-field="aAvgGap" inputmode="decimal" placeholder="次／篇"/></label><label>兩類平均單篇互動率差<input data-field="aRateGap" inputmode="decimal" placeholder="百分點"/></label></div><p class="muted">先看S17的P001計算，再看S18的兩種指標；提高觸及後反應時，請按互動率選擇。</p><button class="button small" id="check-a2" type="button">用原CSV核對</button><button class="button secondary small" id="check-a2-calcs" type="button">核對P001算式與兩類差距</button><p class="feedback" id="feedback-a2-calcs" role="status"></p><p class="feedback" id="feedback-a2" role="status"></p></article>
-<article class="panel"><h3>A3｜讀兩張圖 <small>S14–S15</small></h3><p>老師展示長條圖及折線圖後，寫下你讀到的值。<strong>圖表描述變化，不能單獨證明原因。</strong></p><div class="four"><label>平均互動最高的類型<input data-field="aHighestType"/></label><label>平均互動最低的類型<input data-field="aLowestType"/></label><label>第3週互動總數<input data-field="aWeek3" inputmode="numeric"/></label><label>第8週互動總數<input data-field="aWeek8" inputmode="numeric"/></label></div><details class="prompt-box"><summary>S14｜Gemini長條圖追問指令</summary><pre id="prompt-chart-1">請用剛才已核對的六類「每篇平均互動（次／篇）」作橫向長條圖，依數值由高至低排序；用顏色標出最高和最低，在條末標示數值與單位。只使用已核對的六類結果，不新增類別或推斷銷售。</pre><button class="button secondary small" id="copy-chart-1" type="button">複製長條圖指令</button></details><details class="prompt-box"><summary>S15｜Gemini折線圖追問指令</summary><pre id="prompt-chart-2">請用剛才已核對的第1–8週「每週互動總數（次／週）」作折線圖，按週次排序；標示第3週1,879、第8週690，以及兩者相差1,189次。每週都是4篇。只描述數字變化，不推斷原因。</pre><button class="button secondary small" id="copy-chart-2" type="button">複製折線圖指令</button></details></article>
-<article class="panel"><h3>A4｜核對一篇原表數字 <small>S13、S20</small></h3><div class="two"><label>選一個 post_id<select data-field="aPostId" id="post-id"></select></label><label>Gemini算出的四項互動合計<input data-field="aAiTotal" inputmode="numeric"/></label></div><div class="source-line" id="post-source"></div><button class="button small" id="check-a4" type="button">與原表比較</button><p class="feedback" id="feedback-a4" role="status"></p><label>你怎樣核對？若不同，可能是哪一步出錯？<textarea data-field="aVerifyReason"></textarea></label></article>
-<article class="panel"><h3>A5｜三句洞察及內容決策 <small>S23–S28</small></h3><p>每句標明範圍、數字和單位；留意樣本數與資料不能證明的事。</p><label>句一：最高類型及每篇平均互動<textarea data-field="aInsight1"></textarea></label><label>句二：第3週與第8週的差異<textarea data-field="aInsight2"></textarea></label><label>句三：穿搭教學與顧客分享兩個指標的排序<textarea data-field="aInsight3"></textarea></label><label>下一階段選哪項內容安排？<select data-field="aDecision"><option value="">請選擇</option><option>多發迷因／趣味</option><option>測試顧客分享</option><option>保留穿搭教學</option><option>其他有數據支持的安排</option></select></label><label>數據依據及仍要觀察甚麼？<textarea data-field="aDecisionReason"></textarea></label></article>
+<article class="panel">
+<h3>A1–A2｜六類貼文核對表與關鍵差距 <small>S08、S16–S19（紙本A1、A2只填目標分母及兩行比較）</small></h3>
+<p class="muted">原CSV的「迷因/趣味」與投影片「迷因／趣味」是同一類。你可在此核對Gemini結果，或按上方「教師示範」一鍵載入標準值；<strong>紙本工作紙A2只需抄兩行用於決策的比較類別</strong>。</p>
+<div class="table-wrap"><table id="post-table"><thead><tr><th>類型</th><th>篇數</th><th>平均互動／篇</th><th>平均單篇互動率 %</th></tr></thead><tbody></tbody></table></div>
+<div class="four">
+<label>P001四項互動合計<input data-field="aP001Total" inputmode="numeric" placeholder="159"/></label>
+<label>P001觸及<input data-field="aP001Reach" inputmode="numeric" placeholder="2964"/></label>
+<label>P001互動率 %<input data-field="aP001Rate" inputmode="decimal" placeholder="5.36"/></label>
+<label>六類篇數合計<input data-field="aCategoryTotal" inputmode="numeric" placeholder="32"/></label>
+</div>
+<div class="two">
+<label>穿搭與顧客分享：平均互動差（次／篇）<input data-field="aAvgGap" inputmode="decimal" placeholder="4.37"/></label>
+<label>兩類平均單篇互動率差（百分點）<input data-field="aRateGap" inputmode="decimal" placeholder="0.65"/></label>
+</div>
+<div class="resource-row">
+<button class="button small" id="check-a2" type="button">用原CSV核對六類表</button>
+<button class="button secondary small" id="check-a2-calcs" type="button">核對P001算式與兩類差距</button>
+</div>
+<p class="feedback" id="feedback-a2-calcs" role="status"></p>
+<p class="feedback" id="feedback-a2" role="status"></p>
+</article>
+<article class="panel">
+<h3>A3｜S14–S15 兩輪 Prompt 製圖示範（初稿圖 P0 → 優化圖 P1） <small>14:28–14:34 教師示範</small></h3>
+<p>初稿圖（P0）數值正確但未突出比較重點；第二輪 Prompt（P1）要求排序及標出高低點與差額。<strong>紙本 A3 只需記下高低點讀數及一句第二輪 Prompt 修訂理由。</strong></p>
+<div class="two">
+<details class="prompt-box" open=""><summary>S14 長條圖：初稿 P0 與 優化 P1 指令</summary>
+<p class="muted"><strong>① 初稿 P0：</strong>未排序、同色，觀眾需自行尋找最高與最低。</p>
+<pre id="prompt-chart-1-p0">請根據剛才已核對的六類「每篇平均互動」表，畫一張橫向長條圖。顯示六類名稱、數值及單位「次／篇」。先不要特別標色、排序或加結論；不要改動原數值。</pre>
+<button class="button secondary small" id="copy-chart-1-p0" type="button">複製 S14 初稿 P0</button>
+<p class="muted">② 第二輪優化 P1：由AI找出極值，保留原值與單位；不要預填答案。</p>
+<pre id="prompt-chart-1">第二輪：這張圖要比較哪類貼文每篇平均互動最高和最低。保留全部類別與原數值，按每篇平均互動由高至低排序；請自行找出最高和最低類別，以對比色突出，直接標示類別、數值及單位「次／篇」。如有並列，全部標示。不要推論銷售或原因。</pre>
+<button class="button small" id="copy-chart-1" type="button">複製 S14 第二輪優化 P1</button>
+</details>
+<details class="prompt-box" open=""><summary>S15 折線圖：初稿 P0 與 優化 P1 指令</summary>
+<p class="muted"><strong>① 初稿 P0：</strong>只有八週起伏，未標出高低點與差額。</p>
+<pre id="prompt-chart-2-p0">請根據剛才已核對的第1–8週互動總數，按週次畫一張折線圖。顯示單位「次／週」。先不要標色高低點或加結論；不要改動八個原數值。</pre>
+<button class="button secondary small" id="copy-chart-2-p0" type="button">複製 S15 初稿 P0</button>
+<p class="muted">② 第二輪優化 P1：由AI找出極值，保留原值與單位；不要預填答案。</p>
+<pre id="prompt-chart-2">第二輪：這張圖要比較八週中何時最高、何時最低、相差多少。保留全部週次、原數值與時間順序；請自行找出最高和最低週，標示週次、數值及單位，計算並標示差額。如有並列，全部標示。圖下注明：折線只描述變化，不能單獨解釋原因。</pre>
+<button class="button small" id="copy-chart-2" type="button">複製 S15 第二輪優化 P1</button>
+</details>
+</div>
+</article>
+<article class="panel">
+<h3>A4｜原表抽查核對器 <small>S13、S20（紙本A4記P001、32篇與第8週690）</small></h3>
+<div class="two">
+<label>選一個 post_id 查看原表四項互動<select data-field="aPostId" id="post-id"></select></label>
+<label>輸入四項互動合計驗算<input data-field="aAiTotal" inputmode="numeric" placeholder="例如 P001 填 159"/></label>
+</div>
+<div class="source-line" id="post-source"></div>
+<button class="button small" id="check-a4" type="button">與原表比較</button>
+<p class="feedback" id="feedback-a4" role="status"></p>
+<p class="source-line"><strong>A5 提示（S23–S28 紙本作答）：</strong>第8週四篇為 P029幕後66、P030顧客155、P031產品101、P032優惠368（共690），<strong>根本沒有穿搭教學</strong>；幕後花絮僅2篇。請在紙本工作紙 A5 用<strong>一句話</strong>寫出下月內容安排、數據依據與限制。</p>
+</article>
 </section>
 <section class="lesson-section" id="task-b">
-<div class="section-head"><span class="step">B</span><div><p class="eyebrow">工作紙 B1–B5 · S31–S50</p><h2>留言情感雷達</h2><p>Gemini處理48則；你只貼上精簡標籤，核對總數，再人手抽查五則。</p></div></div>
-<div class="resource-row"><a class="button" download="" href="2026-11-18_48則留言_學生版.csv">下載48則留言CSV</a><button class="button secondary" id="copy-prompt-b" type="button">複製 S37 精簡分類 Prompt</button></div>
-<details class="prompt-box"><summary>先看分類字典，再複製精簡分類指令</summary>
-<p>學生CSV只有五欄，不含教師答案。每則先選一個<strong>主要主題</strong>，再判<strong>正面／負面／中性</strong>；邊界例要記下原句理由。</p>
-<div class="dictionary"><p><b>產品／查詢</b>　產品、尺碼、分店或優惠查詢</p><p><b>物流</b>　送貨、到貨、活動補貨／缺貨</p><p><b>服務</b>　員工、客服、退貨流程、贈品</p><p><b>價格</b>　售價貴平、折扣是否抵買</p><p><b>品質</b>　物料、耐用、瑕疵、包裝、App／網頁體驗</p></div>
-<h3>一次處理 C001–C048</h3><p>Gemini只回傳短標籤，不重複留言原文。學生複製整段回答，貼到B2一次匯入。</p><pre id="prompt-b"></pre>
-<h3>只有回覆不完整時才分兩批</h3><p>仍然上載同一份學生版CSV。每批只需複製整段短標籤、貼回網站一次；不用手動填24列。網站會合併並保存兩次原始回答。</p>
-<div class="resource-row"><button class="button secondary" id="copy-prompt-b1" type="button">複製第一批 C001–C024</button><button class="button secondary" id="copy-prompt-b2" type="button">複製第二批 C025–C048</button></div><details><summary>查看兩批 Prompt 全文</summary><pre id="prompt-b1"></pre><pre id="prompt-b2"></pre></details>
+<div class="section-head"><span class="step">B</span><div><p class="eyebrow">工作紙 B1–B5 · S31–S50（15:40–15:51 開屏操作）</p><h2>留言情感雷達</h2><p>B1 在紙本判兩則；B2 一次貼上 Gemini 的 48 行短標籤自動算交叉表；B3 點選 5 個 ID 看原句。</p></div></div>
+<div class="resource-row">
+<a class="button" download="" href="2026-11-18_48則留言_學生版.csv">下載48則留言CSV（5欄無答案）</a>
+<button class="button secondary" id="copy-prompt-b" type="button">複製 S37 精簡分類 Prompt（C001–C048）</button>
+<button class="button secondary small" id="demo-fill-b2" type="button">教師示範：一鍵載入48行參考短標籤</button>
+<button class="button secondary small" id="demo-missing-b2" type="button">教師示範：模擬漏2個ID（C014、C029）</button>
+</div>
+<details class="prompt-box"><summary>展開五個主題字典、S37 精簡分類指令與分兩批後備指令</summary>
+<p>學生CSV只有五欄（<code>comment_id、platform、date、likes、comment_text</code>），不含教師答案。每則先選一個<strong>主要主題</strong>，再判<strong>正面／負面／中性</strong>（純問句不自動算負面）。</p>
+<div class="dictionary">
+<p><b>產品／查詢</b>　產品、尺碼、分店或優惠查詢</p>
+<p><b>物流</b>　送貨、到貨、活動補貨／缺貨</p>
+<p><b>服務</b>　員工、客服、退貨流程、贈品</p>
+<p><b>價格</b>　售價貴平、折扣是否抵買</p>
+<p><b>品質</b>　物料、耐用、瑕疵、包裝、App／網頁體驗</p>
+</div>
+<h3>一次處理 C001–C048（只輸出 ID|主題|情感 短標籤）</h3>
+<pre id="prompt-b"></pre>
+<h3>只有回覆不完整時才分兩批</h3>
+<div class="resource-row">
+<button class="button secondary small" id="copy-prompt-b1" type="button">複製第一批 C001–C024</button>
+<button class="button secondary small" id="copy-prompt-b2" type="button">複製第二批 C025–C048</button>
+</div>
+<details><summary>查看分批 Prompt 全文</summary><pre id="prompt-b1"></pre><pre id="prompt-b2"></pre></details>
 </details>
-<article class="panel"><h3>B1｜先判兩個邊界例 <small>S32–S36</small></h3><div class="two" id="boundary-cards"></div></article>
-<article class="panel"><h3>B2｜一次貼上精簡分類 <small>S37–S41</small></h3><p>Gemini須處理48則，但你<strong>不用逐列填寫或抄寫</strong>。複製整段短標籤貼在下方，按一次匯入；網站檢查ID、計算交叉表。若回覆不完整，才用上方分批或下方補漏指令。</p><label>Gemini的精簡標籤（整段貼上）<textarea class="tall" id="paste-classification" placeholder="C001|產品／查詢|正面
+<article class="panel">
+<h3>B1｜兩個邊界例原句參考 <small>S32–S36（只在紙本工作紙 B1 作答，網站不重複填寫）</small></h3>
+<p class="muted">請閱讀以下兩則原句，對照上方五個主題字典（特別留意「品質」包含 App／網頁購買體驗），<strong>直接在紙本工作紙 B1 寫下主題、情感與原句詞語依據</strong>：</p>
+<div class="two" id="boundary-cards"></div>
+</article>
+<article class="panel">
+<h3>B2｜一次貼上 48 行短標籤與自動交叉表 <small>S37–S41</small></h3>
+<p>將 Gemini 輸出的 48 行短標籤（格式：<code>C001|產品／查詢|正面</code>）整段貼在下方，按「一次匯入標籤」；網站會自動檢查 48 個 ID 並算出 5×3 交叉表。<strong>紙本B2只記完整ID數及資料來源；交叉表保留電子紀錄，不再手抄五行。</strong></p>
+<label>Gemini 的精簡標籤（整段貼上）<textarea class="tall" id="paste-classification" placeholder="C001|產品／查詢|正面
 C002|物流|負面
-……"></textarea></label><div class="resource-row"><button class="button" id="import-classification" type="button">一次匯入標籤</button><button class="button secondary" id="check-b2" type="button">檢查48個ID及交叉表</button></div><p class="feedback" id="feedback-b2" role="status"></p><details id="import-history-box"><summary>查看已保存的Gemini原始回答（<span id="import-count">0</span>次）</summary><div id="import-history"></div></details><div class="source-line" hidden="" id="missing-panel"><strong>補齊實際缺漏ID</strong><p id="missing-list"></p><button class="button secondary small" id="copy-missing-prompt" type="button">複製只補缺漏ID的指令</button><details><summary>查看補齊指令</summary><pre class="plain-pre" id="missing-prompt"></pre></details></div><h4>Gemini匯入後的主題 × 情感交叉表</h4><div id="cross-tab"></div><p class="muted">核對個別留言原文：到B3選五個comment_id，網站會顯示原句與Gemini標籤；完整來源另可下載學生版CSV。</p></article>
-<article class="panel"><h3>B3｜人手抽查五則 <small>S42–S45</small></h3><p>抽五個不同ID，至少一則不確定。記下原句線索、AI標籤、人手判斷和理由。五則抽查用於找可疑分類，<strong>不能推算全表準確率</strong>。</p><div id="audit-rows"></div><p class="feedback" id="audit-feedback" role="status"></p><div id="revised-cross-tab"></div></article>
-<article class="panel"><h3>B4–B5｜哪個問題先回應？ <small>S47–S50</small></h3><p>可比較負面留言<strong>件數</strong>，也可比較該類內的<strong>負面比例</strong>；先說目標與分母。</p><label>我們先處理<select data-field="bPriority"><option value="">請選擇</option><option>產品／查詢</option><option>物流</option><option>服務</option><option>價格</option><option>品質</option></select></label><label>理由：用兩組數字、指標及分母說明<textarea data-field="bPriorityReason"></textarea></label><label>另一個指標提醒我們甚麼？48則模擬留言不能告訴我們甚麼？<textarea data-field="bLimit"></textarea></label></article>
+……"></textarea></label>
+<div class="resource-row">
+<button class="button" id="import-classification" type="button">一次匯入標籤</button>
+<button class="button secondary" id="check-b2" type="button">檢查48個ID及交叉表</button>
+</div>
+<p class="feedback" id="feedback-b2" role="status"></p>
+<details id="import-history-box"><summary>查看已保存的Gemini原始回答（<span id="import-count">0</span>次）</summary><div id="import-history"></div></details>
+<div class="source-line" hidden="" id="missing-panel">
+<strong>補齊實際缺漏 ID（S39）</strong>
+<p id="missing-list"></p>
+<button class="button secondary small" id="copy-missing-prompt" type="button">複製只補缺漏ID的指令</button>
+<details><summary>查看補齊指令</summary><pre class="plain-pre" id="missing-prompt"></pre></details>
+</div>
+<h4>Gemini 匯入後的主題 × 情感交叉表</h4>
+<div id="cross-tab"></div>
+</article>
+<article class="panel">
+<h3>B3｜人手抽查五則：選 ID 即時看原句 <small>S42–S45</small></h3>
+<p>三步完成 B3：① 在下方選 5 個不同 <code>comment_id</code>（至少一則語氣曖昧，如 C001、C022、C043）；② 閱讀即時顯示的<strong>留言原句</strong>與 AI 標籤；③ <strong>在紙本工作紙 B3 只記 ID、原句關鍵詞、同意／修改及理由</strong>（亦可在此選「修改」即時預覽重算後的交叉表）。</p>
+<div id="audit-rows"></div>
+<p class="feedback" id="audit-feedback" role="status"></p>
+<div id="revised-cross-tab"></div>
+<p class="source-line"><strong>B4–B5 提示（S47–S50 紙本作答）：</strong>按教師參考分類，品質負面件數最多（6則；類內負面率另為6/11＝54.5%），物流類別內負面率最高（4/6＝66.7%；若將C022改歸產品則為3/5＝60.0%仍最高）。請在紙本 B4–B5 寫出你們先處理哪一類、分母及資料限制。</p>
+</article>
 </section>
 <section class="lesson-section" id="task-c">
-<div class="section-head"><span class="step">C</span><div><p class="eyebrow">工作紙 C1–C2 · S51–S65</p><h2>一頁月報格式練習</h2><p>貼文與留言是不同期間的模擬資料，分開寫；先由你們決定行動，再請Gemini整理。</p></div></div>
-<article class="panel"><h3>C1｜改寫過度推論 <small>S52</small></h3><blockquote>「迷因最紅，所以只發迷因；物流最差，所以停止送貨。」</blockquote><label>選一句，改成有數字、有限制的建議<textarea data-field="cCorrection"></textarea></label></article>
-<article class="panel"><h3>C2｜四格月報 <small>S54–S61</small></h3><label>① 貼文表現：第1–8週、篇數、平均互動或互動率<textarea data-field="cPosts"></textarea></label><label>② 留言情感：2026年5–6月、負面幾則／該類幾則<textarea data-field="cComments"></textarea></label><label>③ 兩項行動：內容安排＋顧客回應安排<textarea data-field="cActions"></textarea></label><label>④ 下階段如何驗證？資料限制是甚麼？<textarea data-field="cValidation"></textarea></label><button class="button secondary" id="copy-prompt-c" type="button">用四格內容組成 S58 Gemini Prompt 並複製</button><p class="feedback" id="feedback-c" role="status"></p><label>Gemini整理的原稿<textarea class="tall" data-field="cAiDraft"></textarea></label><label>小組人手定稿<textarea class="tall" data-field="cFinal"></textarea></label><p class="muted" id="final-count">定稿字數：0</p></article>
-<article class="panel"><h3>聽兩組短講 <small>S62–S63</small></h3><p>其他組在鎖屏分享時先看投影、記在紙上；最後開屏才輸入。聽完用下列兩題檢查建議，不必找出不存在的錯。</p><label>匯報組別與其建議使用的分母是甚麼？<textarea data-field="listenDenominator"></textarea></label><label>若下一階段沒有改善，應先檢查甚麼？<textarea data-field="listenNextCheck"></textarea></label></article>
-<article class="panel"><h3>退出題 <small>S64–S65</small></h3><label>Gemini幫我做了甚麼？<input data-field="exitAi"/></label><label>我用原始數據核對了甚麼？<input data-field="exitVerify"/></label><label>最後由我決定了甚麼？<input data-field="exitHuman"/></label></article>
+<div class="section-head"><span class="step">C</span><div><p class="eyebrow">工作紙 C1–C2 · S51–S65（16:30–16:38 開屏整理）</p><h2>一頁月報 Prompt 合成與字數檢查器</h2><p>C1只口答；S65個人退出題在紙本。此處供輸入 C2 四格要點以合成 S58 Gemini 整理指令、保存 AI 原稿及檢查字數。</p></div></div>
+<article class="panel">
+<h3>C2｜四格月報合成器與 AI 原稿保存 <small>S54–S61</small></h3>
+<div class="resource-row">
+<button class="button secondary small" id="demo-fill-c2" type="button">教師示範：一鍵載入範例四格與草稿</button>
+</div>
+<label>① 貼文表現（第1–8週、類型、篇數、平均互動或互動率）<textarea data-field="cPosts" placeholder="例：第1–8週32篇模擬貼文中，迷因／趣味7篇，平均每篇互動729.14次（單篇互動率8.34%）。"></textarea></label>
+<label>② 留言情感（2026年5–6月、負面幾則／該類幾則及比例）<textarea data-field="cComments" placeholder="例：2026年5–6月48則模擬留言中，品質負面6/11（54.5%）件數最多，物流負面4/6（66.7%）比例最高。"></textarea></label>
+<label>③ 兩項行動（內容安排＋顧客回應安排，各有數據依據，不寫跨期因果）<textarea data-field="cActions" placeholder="例：內容安排先測試下一批迷因貼文；客服安排優先核查品質（App/網頁）及物流投訴回覆流程。"></textarea></label>
+<label>④ 下階段同口徑檢驗指標與資料限制<textarea data-field="cValidation" placeholder="例：下階段以同口徑比較同類貼文平均互動及品質／物流負面件數；兩表跨期且為模擬資料，不推論因果或真實銷量。"></textarea></label>
+<button class="button" id="copy-prompt-c" type="button">用四格內容組成 S58 Gemini Prompt 並複製</button>
+<p class="feedback" id="feedback-c" role="status"></p>
+<label>貼上 Gemini 整理的 120–160 字原稿（S58 保存證據）<textarea class="tall" data-field="cAiDraft" placeholder="貼上 Gemini 初稿後，按 S59 五項清單核對並將最終定稿寫在紙本工作紙 C2（或下方定稿格）。"></textarea></label>
+<label>小組人手定稿（120–160字檢查）<textarea class="tall" data-field="cFinal"></textarea></label><label>人手核對說明（即使未修改，也指出核對過甚麼）<textarea data-field="cReview" placeholder="例：返回原表核對哪個數字，保留哪項限制；如有修改，指出改了甚麼。"></textarea></label>
+<p class="muted" id="final-count">定稿字數：0</p>
+</article>
 </section>
 <section class="lesson-section" id="submit">
-<div class="section-head"><span class="step">✓</span><div><p class="eyebrow">S66 · 最後開屏</p><h2>保存及交收</h2><p>本網站不會自動交功課。紙本工作紙交老師；電子作答先下載JSON紀錄，再按老師指定平台及格式提交。</p></div></div>
-<div class="panel"><div class="two"><label>組別／識別碼<input data-field="groupId" placeholder="例如：G03"/></label><label>組員（可只寫座號）<input data-field="members"/></label></div><div class="notice" id="completion"></div><div class="resource-row"><button class="button" id="download-json" type="button">下載完整JSON紀錄</button><button class="button secondary" id="print-record" type="button">列印作答紀錄</button><label class="button secondary upload">匯入舊紀錄<input accept="application/json,.json" hidden="" id="import-json" type="file"/></label></div><p class="muted">答案只保存在此瀏覽器。共用電腦請下載後按「清除此機紀錄」，並確認下載檔案已保存。</p><button class="text-button" id="clear-record" type="button">清除此機紀錄</button></div>
+<div class="section-head"><span class="step">✓</span><div><p class="eyebrow">S66 · 最後開屏交收</p><h2>保存電子紀錄與交回紙本工作紙</h2><p>紙本短答交回；電子月報只交一次。<strong>紙本工作紙（A、B、退出題及V關鍵詞）</strong>；請下載本頁 JSON 紀錄（內含已匯入的 48 行 Gemini 短標籤、月報AI原稿、定稿與核對說明）按老師指示提交。</p></div></div>
+<div class="panel">
+<div class="two">
+<label>組別／識別碼<input data-field="groupId" placeholder="例如：G03"/></label>
+<label>組員座號<input data-field="members" placeholder="例如：04, 12, 19"/></label>
+</div>
+<div class="notice" id="completion"></div>
+<div class="resource-row">
+<button class="button" id="download-json" type="button">下載完整 JSON 紀錄</button>
+<button class="button secondary" id="print-record" type="button">列印電子紀錄</button>
+<label class="button secondary upload">匯入舊紀錄<input accept="application/json,.json" hidden="" id="import-json" type="file"/></label>
+</div>
+<p class="muted">共用電腦請下載 JSON 後按「清除此機紀錄」。</p>
+<button class="text-button" id="clear-record" type="button">清除此機紀錄</button>
+</div>
 </section>
 </main>
-<footer>HKIT APL · 按老師開屏安排使用。資料及分類輸出只作學校模擬練習。</footer>
+<footer>HKIT APL · 紙本短答＋電子月報，各交一次；網站供數據核對、批量匯入與教師示範。資料只作學校模擬練習。</footer>
 <div aria-live="polite" id="toast" role="status"></div>
 </body></html>
